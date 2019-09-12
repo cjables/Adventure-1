@@ -1,5 +1,5 @@
-/*# Adventure-1
-Homework assignment in C++ working with loops*/
+//# Adventure-1
+Homework assignment in C++ working with loops//
 
 #include <iostream>
 #include <cstdlib>
