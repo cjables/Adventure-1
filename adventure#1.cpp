@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-    srand(time(0));	
+	srand(time(0));	
 	int sanity = 10;
 	int psy_Attack;
 	int psy_Block;
@@ -17,54 +17,51 @@ int main() {
 	cout << "Putting on clothes you venture outside to investigate.\n";
 	cout << "You feel a dark presence futher into the Woods.\n\n";
 
-
-	while(	sanity >= 0 && counter <= rand() % 6 + 1 ) {
-
+	while ( sanity >= 0 && counter <= rand() % 6 + 1 ) {
 		cout << "You go deeper into the woods\n\n";
 		counter++;
 
 		std::this_thread::sleep_for(chrono::milliseconds(5000));
 
-
 		int encounter = rand() % 4;
 		cout << "Something comes out of the woods!\n"; 
-		switch (encounter){
-			case 0:
-				cout << "A malshaped wolf the size of a horse\n";
-				cout << "A MUTANT DIREWOLF CHAGRGES!\n";
-				break;
-			case 1:
-				cout << "A strange undead zombie\n";
-				cout << "A WEIDERGANER COMES FORWARD!\n";
-				break;
-			case 2: 
-				cout << "A mass of aberrational horror\n";
-				cout << "A FOULSPAWN SLITHERS OUT!\n";
-				break;
-			}
-			cout << "You prepare your psycic defenses.\n";
+		switch (encounter) {
+		case 0:
+			cout << "A malshaped wolf the size of a horse\n";
+			cout << "A MUTANT DIREWOLF CHAGRGES!\n";
+			break;
+		case 1:
+			cout << "A strange undead zombie\n";
+			cout << "A WEIDERGANER COMES FORWARD!\n";
+			break;
+		case 2: 
+			cout << "A mass of aberrational horror\n";
+			cout << "A FOULSPAWN SLITHERS OUT!\n";
+			break;
+		}
+		
+		cout << "You prepare your psycic defenses.\n";
 
-			psy_Attack = rand() % 5; 
-			psy_Block = rand() % 5;
-			if (psy_Attack <= psy_Block) {
-				cout << "You defend against the attack of the monster and escape\n\n"; 
-
-				std::this_thread::sleep_for(chrono::milliseconds(5000));
-
-			} else { 
-				sanity =	sanity - psy_Attack;
-				cout << "You are damaged by the monster. Your sanity has " <<	sanity << " points left \n\n";
+		psy_Attack = rand() % 5; 
+		psy_Block = rand() % 5;
+		if (psy_Attack <= psy_Block) {
+			cout << "You defend against the attack of the monster and escape\n\n"; 
 
 			std::this_thread::sleep_for(chrono::milliseconds(5000));
 
-			}
+		} else { 
+			sanity = sanity - psy_Attack;
+			cout << "You are damaged by the monster. Your sanity has " <<	sanity << " points left \n\n";
+
+			std::this_thread::sleep_for(chrono::milliseconds(5000));
+		}
 		
-		if(sanity <= 5){
+		if (sanity <= 5) {
 			cout << "You feel the weight of the madness in these woods press down on you\n";
 			cout << "You feel like you should go home but press on\n";
 		}
 
-		if(sanity > 0){
+		if (sanity > 0) {
 			cout << "You find the heart of the meteor. It calls you forward.\n";
 			cout << "You wake up in your bed, was that all a dream?\n";
 		}
