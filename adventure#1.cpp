@@ -47,27 +47,27 @@ int main() {
 			psy_Attack = rand() % 5; 
 			psy_Block = rand() % 5;
 			if (psy_Attack <= psy_Block) {
-			cout << "You defend against the attack of the monster and escape\n\n"; 
+				cout << "You defend against the attack of the monster and escape\n\n"; 
 
-			std::this_thread::sleep_for(chrono::milliseconds(5000));
+				std::this_thread::sleep_for(chrono::milliseconds(5000));
 
 			} else { 
-			sanity =	sanity - psy_Attack;
-			cout << "You are damaged by the monster. Your sanity has " <<	sanity << " points left \n\n";
+				sanity =	sanity - psy_Attack;
+				cout << "You are damaged by the monster. Your sanity has " <<	sanity << " points left \n\n";
 
 			std::this_thread::sleep_for(chrono::milliseconds(5000));
 
 			}
-			}
+	}
 		if(sanity <= 5){
 			cout << "You feel the weight of the madness in these woods press down on you\n";
 			cout << "You feel like you should go home but press on\n";
-			}
+		}
 
-		if	(sanity > 0){
+		if(sanity > 0){
 			cout << "You find the heart of the meteor. It calls you forward.\n";
 			cout << "You wake up in your bed, was that all a dream?\n";
-			}
+		}
 
 		else {
 			cout << "You feel something break in your mind.\n";
