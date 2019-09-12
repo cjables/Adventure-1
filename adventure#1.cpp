@@ -58,7 +58,7 @@ int main() {
 			std::this_thread::sleep_for(chrono::milliseconds(5000));
 
 			}
-	}
+		
 		if(sanity <= 5){
 			cout << "You feel the weight of the madness in these woods press down on you\n";
 			cout << "You feel like you should go home but press on\n";
@@ -74,6 +74,7 @@ int main() {
 			cout << "You wander into the darkest parts of the woods forever lost\n"; 
 			return - 1;
 		}
+	}
 }
 
 
